@@ -38,6 +38,20 @@ if ('IntersectionObserver' in window) {
   revealEls.forEach((el) => el.classList.add('in'));
 }
 
+/* ===================== ITENS DE ATENDIMENTO → WHATSAPP ===================== */
+const wppFloat = document.querySelector('.wpp-float');
+document.querySelectorAll('.area-item').forEach(function (item) {
+  item.addEventListener('click', function () {
+    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+    if (wppFloat) {
+      wppFloat.classList.remove('wpp-highlight');
+      void wppFloat.offsetWidth; // força reflow para reiniciar a animação
+      wppFloat.classList.add('wpp-highlight');
+      setTimeout(function () { wppFloat.classList.remove('wpp-highlight'); }, 1700);
+    }
+  });
+});
+
 /* ===================== DEPOIMENTOS (carrossel no mobile) ===================== */
 const track = document.getElementById('testiTrack');
 const prev = document.getElementById('testiPrev');
