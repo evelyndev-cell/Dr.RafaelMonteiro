@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- Fundo navy com cantos arredondados -->
+  <rect width="32" height="32" rx="7" fill="#0A0D1C"/>
+  <!-- Borda dourada fina -->
+  <rect x="1" y="1" width="30" height="30" rx="6" stroke="#C9A66B" stroke-width="0.8" stroke-opacity="0.55"/>
+  <!-- Linha dourada horizontal superior -->
+  <line x1="8" y1="9" x2="24" y2="9" stroke="#C9A66B" stroke-width="0.7" stroke-opacity="0.45"/>
+  <!-- Linha dourada horizontal inferior -->
+  <line x1="8" y1="23" x2="24" y2="23" stroke="#C9A66B" stroke-width="0.7" stroke-opacity="0.45"/>
+  <!-- Letra "R" — corpo vertical -->
+  <rect x="10" y="11" width="1.5" height="10" rx="0.5" fill="#C9A66B"/>
+  <!-- "R" — arco superior (bump) -->
+  <path d="M11.5 11 H15.5 Q18.5 11 18.5 14 Q18.5 17 15.5 17 H11.5" stroke="#C9A66B" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- "R" — perna diagonal -->
+  <line x1="15.5" y1="17" x2="19.5" y2="21" stroke="#C9A66B" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Diamante decorativo pequeno -->
+  <path d="M23 16 L24.2 17.2 L23 18.4 L21.8 17.2 Z" fill="#C9A66B" fill-opacity="0.7"/>
+</svg>
