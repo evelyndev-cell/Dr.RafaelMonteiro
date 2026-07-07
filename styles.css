@@ -827,14 +827,18 @@ a { text-decoration: none; color: inherit; }
   .hero__meta { justify-content: center; }
   .hero__crm { border-right: none; padding-right: 0; align-items: center; }
   .hero__photo {
-    order: 1; height: 400px; min-height: 0;
-    margin: 0 auto;
-    width: 100%; max-width: 320px;
+    order: 1; height: 420px; min-height: 0;
+    margin: 0 calc(-1 * clamp(1.25rem, 4vw, 3rem));
     -webkit-mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
+    -webkit-mask-composite: source-over;
     mask-image: linear-gradient(to bottom, black 65%, transparent 100%);
-    -webkit-mask-composite: unset; mask-composite: unset;
+    mask-composite: add;
   }
-  .hero__photo img { object-position: center 8%; width: 100%; }
+  /* Remove gradiente lateral do desktop que cobria o lado esquerdo */
+  .hero__photo::before {
+    background: linear-gradient(0deg, var(--navy-900) 0%, rgba(10,13,28,.35) 14%, transparent 32%);
+  }
+  .hero__photo img { object-position: center 10%; }
   .hero__scroll { display: none; }
 
   .area-item { grid-template-columns: 3.5rem 1px 1fr 2rem; gap: 1rem; }
